@@ -1,47 +1,62 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shopping List</title>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/styles.css">
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <!-- Container for the shopping list app -->
+  <div class="container">
+    <!-- Heading for the shopping list -->
+    <h2>Shopping List</h2>
 
-    <body>
-        <div class="container">
-            <h2>Shopping List</h2>
+    <!-- Form for adding a new item to the shopping list -->
+    <form id="addItemForm">
+      <!-- Label for the item name input -->
+      <label for="name">Item Name:</label>
+      <!-- Input for the item name -->
+      <input type="text" id="name" name="name" required>
+      <!-- Line break for better readability -->
+      <br>
+      <!-- Label for the price input -->
+      <label for="price">Price:</label>
+      <!-- Input for the price -->
+      <input type="number" id="price" name="price" min="0" step="1" required>
+      <!-- Line break for better readability -->
+      <br>
+      <!-- Button for submitting the new item -->
+      <button type="submit">Add Item</button>
+    </form>
 
-            <form id="addItemForm">
-                <label for="name">Item Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br>
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" min="0" step="1" required>
-                <br>
-                <button type="submit">Add Item</button>
-              </form>
-            <div class="table-container">
-            <table id="itemTable">
-                <thead>
-                  <tr>
-                    <th>Item</th>
-                    <th>Price</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody id="itemList"></tbody>
-              </table>
-            </div>
+    <!-- Container for the item table -->
+    <div class="table-container">
+      <!-- Table for displaying the shopping list items -->
+      <table id="itemTable">
+        <!-- Table header for item name, price, and actions -->
+        <thead>
+          <tr class="row">
+            <th>Item</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <!-- Table body for displaying shopping list items -->
+        <tbody id="itemList"></tbody>
+      </table>
+    </div>
 
-              <div>
-                <h2>Total Price:</h2>
-                <span id="totalPrice"></span>
-              </div>
+    <!-- Container for displaying the total price -->
+    <div>
+      <!-- Heading for the total price -->
+      <h2>Total Price:</h2>
+      <!-- Span for displaying the total price -->
+      <span id="totalPrice"></span>
+    </div>
+  </div>
 
-
-        </div>
-              
-        <script src="./js/main.js"></script>
-    </body>
+  <!-- Include the JavaScript file for handling the shopping list app -->
+  <script src="./js/main.js"></script>
+</body>
 </html>

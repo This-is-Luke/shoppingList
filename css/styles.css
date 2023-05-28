@@ -1,20 +1,24 @@
+/* Set common properties for all elements */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Set font family for the body */
 body {
   font-family: Arial, sans-serif;
 }
 
-label{
+/* Style label elements */
+label {
   font-size: 20px;
   font-weight: bold;
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
+/* Style container elements */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -23,17 +27,22 @@ label{
   border-radius: 5px;
 }
 
+/* Style headings */
 h2 {
   text-align: left;
   margin-bottom: 20px;
 }
 
-.actions {
+/* Style action and table action elements */
+.actions,
+.table-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 
+/* Style button elements */
 button {
   background-color: #f15959;
   color: #fff;
@@ -43,7 +52,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  margin: 1rem;
+  margin: 0.4rem;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -52,16 +61,17 @@ button:hover {
   background-color: #5a9ee0;
 }
 
+/* Style table container elements */
 .table-container {
   margin-right: 20px;
 }
 
+/* Style table elements */
 table {
   width: 100%;
   border: none;
   border-collapse: collapse;
 }
-
 
 th,
 td {
@@ -88,6 +98,7 @@ tr:hover {
   background-color: #ddd;
 }
 
+/* Style input elements */
 input[type="text"],
 input[type="number"] {
   border: 1px solid #ccc;
@@ -114,13 +125,14 @@ input[type="button"]:hover {
   background-color: #5a9ee0;
 }
 
+/* Style checkbox cell elements */
 .checkbox-cell {
-  width: 1rem;
+  width: 0.1rem;
   text-align: center;
   margin-right: 10px;
 }
 
-
+/* Style item name and price elements */
 .item-name,
 .price {
   font-size: 29px;
@@ -129,25 +141,28 @@ input[type="button"]:hover {
   word-break: break-word;
 }
 
+/* Style price cell elements */
 .price-cell {
-  width: 200px; /* Adjust this value for the desired fixed width */
+  width: 200px;
   text-align: left;
   font-size: 24px;
   background-color: #0471dd;
   color: #fff;
-  padding-left: 0.4rem;
+  padding: 0.4rem;
   border-left: 1px solid #ccc;
 }
 
 .item-name {
-  min-width: 130px; /* Adjust this value to make the item name column larger */
+  min-width: 8rem;
 }
 
+/* Style checkbox elements */
 input[type=checkbox] {
-  transform: scale(2.5);
+  margin: 1rem;
+  transform: scale(2);
 }
 
-
+/* Style checkmark elements */
 .checkmark {
   cursor: pointer;
   display: inline-block;
@@ -161,7 +176,13 @@ input[type=checkbox] {
   background-color: #5a9ee0;
 }
 
-#totalPrice{
+/* Style checked row elements */
+.row.checked {
+  background-color: #5a9ee0;
+}
+
+/* Style total price element */
+#totalPrice {
   border: 1px solid #5a9ee0;
   background-color: #5a9ee0;
   border-radius: 1rem;
@@ -172,5 +193,3 @@ input[type=checkbox] {
   justify-content: center;
   text-align: center;
 }
-
-
